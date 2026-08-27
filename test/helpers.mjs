@@ -1,0 +1,3 @@
+export class MemoryStore { constructor() { this.database = { creditClaims: [] }; this.writes = 0; } read() { return structuredClone(this.database); } write(data) { this.database = structuredClone(data); this.writes += 1; } }
+export const monitor = { id: 'monitor-870', role: 'service_monitor' };
+export const claim = { contractId: 'CTR-870', serviceName: 'Order Routing', reportingPeriod: '2026-08', monthlyFee: 10000, targetAvailabilityPct: 99.95, maximumCreditPct: 25, creditBands: [{ upperAvailabilityPct: 99.9, creditPct: 10 }, { upperAvailabilityPct: 99, creditPct: 20 }, { upperAvailabilityPct: 98, creditPct: 35 }], measuredAvailabilityPct: 98.5, incidentMinutes: 648, evidenceReference: 'EVD-SLA-870' };
